@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">HTDFirstProject</string>
+    <string name="txtFirstName">Enter Your First Name</string>
+    <string name="txtSecondName">Enter Your Last Name</string>
+    <string name="txtEmail">Enter Your Email</string>
+    <string name="txtMobNo">Enter Your Mobile No.</string>
+    <string name="txtPhNo">Enter Your Phone No.</string>
+    <string name="txtAddress">Enter Your Address</string>
+    <string name="btnOk">OK</string>
+    <string name="btnCancel">Cancel</string>
+</resources>

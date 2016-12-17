@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.abhinav.htdfirstproject.MainActivity">
+
+
+    <EditText
+        android:id="@+id/edt_firstName"
+        style="@style/editTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/txtFirstName"
+
+        android:inputType="textAutoComplete" />
+
+    <EditText
+        android:id="@+id/edt_secondName"
+        style="@style/editTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_firstName"
+        android:hint="@string/txtSecondName"
+        android:inputType="textAutoComplete" />
+
+    <EditText
+        android:id="@+id/edt_email"
+        style="@style/editTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_secondName"
+        android:hint="@string/txtEmail"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/edt_mobNo"
+        style="@style/editTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_email"
+        android:hint="@string/txtMobNo"
+        android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/edt_phNo"
+        style="@style/editTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_mobNo"
+        android:hint="@string/txtPhNo"
+        android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/edt_address"
+        style="@style/editTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_phNo"
+        android:hint="@string/txtAddress"
+        android:inputType="textAutoComplete" />
+
+    <Button
+        android:id="@+id/btnOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_address"
+        android:hint="@string/btnOk"
+        android:onClick="showMessage" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_address"
+        android:layout_toRightOf="@id/btnOk"
+        android:hint="@string/btnCancel"
+        android:onClick="resetMessage"
+
+        />
+</RelativeLayout>
