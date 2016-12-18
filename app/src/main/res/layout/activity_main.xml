@@ -38,21 +38,12 @@
         android:hint="@string/txtEmail"
         android:inputType="textEmailAddress" />
 
-    <EditText
-        android:id="@+id/edt_mobNo"
-        style="@style/editTextStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/edt_email"
-        android:hint="@string/txtMobNo"
-        android:inputType="phone" />
-
-    <EditText
+       <EditText
         android:id="@+id/edt_phNo"
         style="@style/editTextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/edt_mobNo"
+        android:layout_below="@id/edt_email"
         android:hint="@string/txtPhNo"
         android:inputType="phone" />
 

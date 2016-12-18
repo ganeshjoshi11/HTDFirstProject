@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
         Button button = (Button) findViewById(R.id.btnOk);
         button.setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v) {
-                        Log.i(TAG, "onClick: username");
 
 
             }
