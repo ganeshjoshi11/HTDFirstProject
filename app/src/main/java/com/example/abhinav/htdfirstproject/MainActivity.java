@@ -12,16 +12,22 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    SharedPreferenceManager session;
     Button btnOk, btnCancel;
     EditText edt_firstName, edt_secondName, edt_email, edt_phNo, edt_address;
 
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        
+        session = new SharedPreferenceManager(getApplicationContext());
+        session.checkLogin();
+
+        Toast.makeText(MainActivity.this, "User Login Status: " + session.isLoggedIn(), Toast.LENGTH_LONG).show();
+
     }
+
 
     public void showMessage(View v) {
         btnOk = (Button) findViewById(R.id.btnOk);
@@ -45,9 +51,14 @@ public class MainActivity extends AppCompatActivity {
             infoIntent.putExtra("email",email);
             infoIntent.putExtra("phNo",phNo);
             infoIntent.putExtra("address",address);
-
-
             startActivity(infoIntent);
+
+            Intent loginIntent = new Intent(MainActivity.this,LoginActivity.class);
+            loginIntent.putExtra("firstName",firstName);
+            loginIntent.putExtra("secondName",secondName);
+            loginIntent.putExtra("email",email);
+            loginIntent.putExtra("phNo",phNo);
+            loginIntent.putExtra("address",address);
 
         }else{
             Toast.makeText(MainActivity.this, "Please Provide All Information", Toast.LENGTH_SHORT).show();
